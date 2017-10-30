@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<script src="../api_add.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/base.css">
+<head>
+	<h2>Add A Location!</h2>
+
+</head>
+<body>
+	
+  	<form method="POST" action="">
+		
+		<input type="hidden" name="location" value="{{location}}">
+		<br><br>
+		<select name="type" id="type">
+			<option value="Restaurant">Restaurant</option>
+			<option value="Quick">Quick Food</option>
+			<option value="Coffee">Coffee</option>
+			<option value="Dessert">Dessert</option>
+			<option value="Grocery">Grocery</option>
+			<option value="Other">Supplies</option>
+		</select><br><br>
+		<select name="category" id="category">
+			<option value="Restaurant">---Restaurant---</option>
+			<option value="American">American</option>
+			<option value="Asian">Asian</option>
+			<option value="Brunch">Brunch</option>
+			<option value="Halal">Halal</option>
+			<option value="Italian">Italian</option>
+			<option value="Mexican">Mexican</option>
+			<option value="Pizza">Pizza</option>
+
+			<option value="Quick" style="background-color: gray">---Quick Food---</option>
+			<option value="all_quick">All Fast Food</option>
+			
+			<option value="Coffee" style="background-color: gray">---Coffee---</option>
+			<option value="Cafe">Cafe</option>
+			<option value="Coffee">Just Coffee</option>
+			
+			<option value="Dessert" style="background-color: gray">---Dessert---</option>
+			<option value="Ice">Ice Cream</option>
+			<option value="Pastry">Pastry</option>
+			<option value="Cookies">Cookies</option>
+
+			<option value="Grocery" style="background-color: gray">---Grocery---</option>
+			<option value="Specialty">Specialty</option>
+			<option value="General">General</option>
+			
+			<option value="Other" style="background-color: gray">---Other---</option>
+			<option value="Pharmacy">Pharmacy</option>
+			<option value="Bicycle">Bicycle Repair</option>
+			<option value="Government">Government</option>
+			<option value="Beauty">Health/Beauty</option>
+			
+		</select><br><br>
+
+		<input type="text" name="place_name" id="place_name" placeholder="Enter Name" style="width: 400px"><br><br>
+		<input type="text" name="lat" id="lat" placeholder="Enter Latitude" style="width: 400px"><br><br>
+		<input type="text" name="lng" id="lng" placeholder="Enter Longitude" style="width: 400px"><br><br>
+		<input type="text" name="description" id="description" placeholder="Description" style="width: 400px; height: 50px"><br><br>
+		<input type="submit" name="Add Location" id="add_locBtn">
+	</form>
+
+	<p id="succes"></p>
+
+
+</body>
+
+
+</html>

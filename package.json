@@ -1,0 +1,31 @@
+{
+  "name": "npb244-final-project",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-007-fall-2016/npb244-final-project.git"
+  },
+  "author": "Nathaniel Picard-Busky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-007-fall-2016/npb244-final-project/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-007-fall-2016/npb244-final-project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "mongoose": "^4.12.4",
+    "mongoose-url-slugs": "^0.2.2",
+    "node-uuid": "^1.4.7",
+    "passport": "^0.4.0",
+    "passport-local-mongoose": "^4.2.1"
+  }
+}

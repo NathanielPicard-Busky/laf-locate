@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<script src="../api_home.js"></script>
+  <head>
+    
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+       #map {
+        height: 400px;
+        width: 98%;
+       }
+    </style>
+  </head>
+  <body>
+
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 17,
+              center: {lat: 40.7173884, lng: -74.0030664},
+            });
+            
+
+            var marker = new google.maps.Marker({
+              map: map,
+              position: {lat: 40.717232, lng: -74.001902 },
+              //placeId: 'ChIJBYvLuCBawokR6kDpj1J22yU',
+              title: "LAF!"
+
+            });
+            var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Lafayette Hall</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Lafayette Hall</b> at NYU is home to over 1000 resdidents. Situated smack-dab between Chinatown and the Financial District, it belongs to a very diverse and exciting neighborhood. </p><p> Enjoy exploring the wealth of shops and restaurants the city has to offer but always remember you are always welcomed back home to Laf.</div>';
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1pb1GyyYqpGQfXlImh-4zhXK_2Dcjxb0&callback=initMap">
+        </script>
+    <br>
+
+
+      
+    <p style="width: 22%; float: left">Location Types</p>
+    <p style="width: 22%; float: left">Categories</p>
+    <p style="width: 54%; float: left">Locations</p>
+  
+    <div style="height:200px;width:22%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;float: left" id="types_scroll">
+    <form  method="GET" action="">
+        <input type="submit" name="restaurants_but" id="restaurants_but" value="Restaurants">
+      </form>
+      
+      <form id="filter-type-form" method="GET" action="">
+        
+        <input type="submit" name="quick_but" id="quick_but" value="Quick Food">
+      </form>
+      <form id="filter-type-form" method="GET" action="">
+     
+        <input type="submit" name="dessert_but" id="dessert_but" value="Dessert">
+      </form>
+     <form id="filter-type-form" method="GET" action="">
+   
+        <input type="submit" name="coffee_but" id="coffee_but" value="Coffee">
+      </form>
+      <form id="filter-type-form" method="GET" action="">
+   
+        <input type="submit" name="grocery_but" id="grocery_but" value="Grocery">
+      </form>
+      <form id="filter-type-form" method="GET" action="">
+ 
+        <input type="submit" name="other_but" id="other_but" value="Other">
+      </form>
+    </div>
+
+    <div style="height:200px;width:22%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;float: left" id="categories_scroll">
+      <div id="Restaurant" style="display: none">
+        <script src="../api_restaurant.js"></script>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="american" id="american" value="American">
+        </form>
+
+        <form  method="GET" action="">
+          <input type="submit" name="asian" id="asian" value="Asian">
+        </form>
+
+        <form id="filter-type-form" method="GET" action="">
+
+          <input type="submit" name="brunch" id="brunch" value="Brunch">
+        </form>
+
+        <form id="filter-type-form" method="GET" action="">
+
+          <input type="submit" name="halal" id="halal" value="Halal">
+        </form>
+
+        <form id="filter-type-form" method="GET" action="">
+
+          <input type="submit" name="italian" id="italian" value="Italian">
+        </form>
+
+        <form id="filter-type-form" method="GET" action="">
+
+          <input type="submit" name="mexican" id="mexican" value="Mexican">
+        </form>
+
+        <form id="filter-type-form" method="GET" action="">
+
+          <input type="submit" name="pizza" id="pizza" value="Pizza">
+        </form>
+
+
+      </div>
+
+      <div id="Quick" style="display: none">
+        <script src="../api_quick.js"></script>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="quick_all" id="quick_all" value="All Fast Food">
+        </form>
+
+
+      </div>
+
+      <div id="Coffee" style="display: none">
+        <script src="../api_coffee.js"></script>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="cafe" id="cafe" value="Cafe">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="just" id="just" value="Just Coffee">
+        </form>
+
+
+      </div>
+
+      <div id="Dessert" style="display: none">
+        <script src="../api_dessert.js"></script>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="ice" id="ice" value="Ice Cream">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="pastry" id="pastry" value="Just Pastry">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="cookies" id="cookies" value="Cookies">
+        </form>
+
+      </div>
+
+      <div id="Grocery" style="display: none">
+        <script src="../api_grocery.js"></script>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="specialty" id="specialty" value="Specialty">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="general" id="general" value="General">
+        </form>
+
+
+      </div>
+
+      <div id="Other" style="display: none">
+        <script src="../api_other.js"></script>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="pharmacy" id="pharmacy" value="Pharmacy">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="bicycle" id="bicycle" value="Bicycle Repair">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="gov" id="gov" value="Government">
+        </form>
+        <form id="filter-type-form" method="GET" action="">
+          
+          <input type="submit" name="beauty" id="beauty" value="Health/Beauty">
+        </form>
+
+      </div>
+      
+    </div>
+
+    <div style="height:200px;width:54%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;float: left" id="places_scroll">
+    
+    
+    </div>
+
+ 
+ 
+	
+
+  </body>
+</html>
