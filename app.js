@@ -204,6 +204,7 @@ app.get('/add-location', function(req, res){
 });
 
 app.post('/add-location', function(req, res){
+	console.log("ADD LOCATION");
 	//get user and display it in the menu
 	if(req.cookies.user != undefined){
 		var user = "User: " + req.cookies.user;
@@ -221,6 +222,7 @@ app.post('/add-location', function(req, res){
 	      desc: req.body.description
  	}).save(function(err, location, count) {
 	  	//location saved
+	  	console.log("SUCCESS");
 	    res.send('success');
 
   	});
