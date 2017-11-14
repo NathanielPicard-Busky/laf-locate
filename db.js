@@ -69,7 +69,7 @@ console.log("dbconf:");
 console.log(dbconf);
 } else {
 console.log("ELSE"); // if we're not in PRODUCTION mode, then use
- dbconf = 'mongodb://localhost/laflocateDB';
+ dbconf = 'mongodb://heroku_4n5p74pk:eaokt57b674t7nevb3p6isbol9@ds259105.mlab.com:59105/heroku_4n5p74pk';
 }
 
 mongoose.connect(dbconf);
