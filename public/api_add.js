@@ -31,7 +31,7 @@ function init() {
     //create new XMLHttpRequest
     var req = new XMLHttpRequest();
     //specify url
-    var url = 'https://powerful-cliffs-42161.herokuapp.com/add-location';
+    var url = 'https://laflocate.herokuapp.com/add-location';
     //open a post based on the above url
     req.open('POST', url, true);
     //set the request header content type to urlencoded

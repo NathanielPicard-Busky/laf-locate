@@ -34,12 +34,12 @@ function init() {
 
     //if there is no filter category specified, the url query has no value
     if(category == "All"){
-      var url = 'https://powerful-cliffs-42161.herokuapp.com/api/filter/category?category=';
+      var url = 'https://laflocate.herokuapp.com/api/filter/category?category=';
     }
     //otherwise, the category is passed in through the url query
     else{
 
-      var url = 'https://powerful-cliffs-42161.herokuapp.com/api/filter/category?category=' + category;
+      var url = 'https://laflocate.herokuapp.com/api/filter/category?category=' + category;
     }
 
     //open a GET request based on the above url
