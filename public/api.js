@@ -26,7 +26,7 @@ function init() {
     //create new XMLHttpRequest
     var req = new XMLHttpRequest();
     //specify url
-    var url = 'http://i6.cims.nyu.edu:17876/add-location';
+    var url = 'https://powerful-cliffs-42161.herokuapp.com';
     //open a post based on the above url
     req.open('POST', url, true);
     //set the request header content type to urlencoded
@@ -77,12 +77,12 @@ function init() {
 
     //if there is no filter director specified, the url query has no value
     if(type == "All"){
-      var url = 'http://i6.cims.nyu.edu:17876/api/filter?type=';
+      var url = 'https://powerful-cliffs-42161.herokuapp.com/api/filter?type=';
     }
     //otherwise, the director is passed in through the url query
     else{
 
-      var url = 'http://i6.cims.nyu.edu:17876/api/filter?type=' + type;
+      var url = 'https://powerful-cliffs-42161.herokuapp.com/api/filter?type=' + type;
     }
     //open a GET request based on the above url
     req.open('GET', url, true);
