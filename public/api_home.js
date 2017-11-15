@@ -88,12 +88,12 @@ function init() {
 
     //if there is no filter type specified, the url query has no value
     if(type == "All"){
-      var url = 'http://i6.cims.nyu.edu:17876/api/filter/type?type=';
+      var url = 'https://powerful-cliffs-42161.herokuapp.com/api/filter/type?type=';
     }
     //otherwise, the type is passed in through the url query
     else{
 
-      var url = 'http://i6.cims.nyu.edu:17876/api/filter/type?type=' + type;
+      var url = 'https://powerful-cliffs-42161.herokuapp.com/api/filter/type?type=' + type;
     }
     //open a GET request based on the above url
     req.open('GET', url, true);
