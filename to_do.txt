@@ -1,0 +1,10 @@
+To Do:
+
+Typeface
+color changes when tab is clicked
+change login screen when a user is logged in
+only show locations when it has been check (simple boolean)
+find out how to easily import data into database (may have to write a script?)
+format review pane
+browser tab icon
+genericize the platform so that it can be set up for any set of users
