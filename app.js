@@ -127,8 +127,8 @@ app.get('/about', function(req, res){
 		res.redirect('/login');
 		//var user = 'Click Here To Login!';
 	}
-	var active = "<li class=\"current_page_item\">" + '';
-	res.render('about', {'user': user, 'title': 'LafLocate', 'homeactive': active});
+	
+	res.render('about', {'user': user, 'title': 'LafLocate'});
 
 });
 
