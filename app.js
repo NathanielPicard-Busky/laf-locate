@@ -128,7 +128,7 @@ app.get('/about', function(req, res){
 		//var user = 'Click Here To Login!';
 	}
 
-	res.render('about', {'user': user, 'title': 'LafLocate', 'homeactive': '<li class="current_page_item">'});
+	res.render('about', {'user': user, 'title': 'LafLocate', 'homeactive': '<li class=\"current_page_item\">'});
 
 });
 
