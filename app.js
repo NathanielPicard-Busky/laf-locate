@@ -128,11 +128,12 @@ app.get('/about', function(req, res){
 		//var user = 'Click Here To Login!';
 	}
 
-	res.render('about', {'user': user, 'title': 'LafLocate'});
+	res.render('about', {'user': user, 'title': 'LafLocate', 'homeactive': 'class="current_page_item"'});
 
 });
 
 app.get('/login', function(req, res) {
+
   res.render('login');
 });
 
