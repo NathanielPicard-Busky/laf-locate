@@ -41,6 +41,7 @@ app.get('/home', function(req, res){
 		var user = "User: " + req.cookies.user;
 	}
 	else{
+		
 		res.redirect('/login');
 		//var user = 'Click Here To Login!';
 	}
