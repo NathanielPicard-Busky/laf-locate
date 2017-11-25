@@ -135,8 +135,9 @@ app.get('/about', function(req, res){
 
 
 app.get('/logout', function(req, res){
+	console.log("LOGOUT");
 	req.logout();
-	res.redirect('/home');
+	res.redirect('/');
 
 });
 
