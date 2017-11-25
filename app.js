@@ -134,7 +134,7 @@ app.get('/about', function(req, res){
 });
 
 
-app.get('/logout', function(req, res){
+/*app.get('/logout', function(req, res){
 	console.log("LOGOUT");
 	req.session.destroy(function (err) {
 		console.log("callback");
@@ -142,7 +142,8 @@ app.get('/logout', function(req, res){
     	res.redirect('/'); //Inside a callback… bulletproof!
   	});
 
-});
+});*/
+app.get('/logout', logout());
 
 app.get('/login', function(req, res) {
 
