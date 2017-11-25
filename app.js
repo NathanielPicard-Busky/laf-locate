@@ -133,6 +133,13 @@ app.get('/about', function(req, res){
 
 });
 
+
+app.get('logout', function(req, res){
+	req.logout();
+	res.redirect('/home');
+
+});
+
 app.get('/login', function(req, res) {
 	if(req.cookies.user != undefined){
 		var userMessage = "You are logged in as: " + req.cookies.user;
