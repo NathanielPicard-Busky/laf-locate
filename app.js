@@ -137,7 +137,7 @@ app.get('/about', function(req, res){
 
 app.get('/logout', function(req, res){
 	console.log("LOGOUT");
-	req.store.destroy(req.sessionID, function (err) {
+	store.destroy(req.sessionID, function (err) {
 		//res.clearCookie('connect.sid');
     	res.redirect('/'); //Inside a callback… bulletproof!
   	});
