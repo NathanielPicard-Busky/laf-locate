@@ -136,14 +136,16 @@ app.get('/about', function(req, res){
 app.get('/login', function(req, res) {
 	if(req.cookies.user != undefined){
 		var userMessage = "You are logged in as: " + req.cookies.user;
+		var logout = "Click here to log out!";
 		
 	}
 	else{
 		var userMessage = "Enter your username and password below!";
+		var logout = undefined;
 		//var user = 'Click Here To Login!';
 	}
 
-  res.render('login', {'userMessage': userMessage});
+  res.render('login', {'userMessage': userMessage, 'logout': logout});
 });
 
 
