@@ -143,6 +143,8 @@ app.get('/logout', function(req, res){
 });
 
 app.get('/login', function(req, res) {
+
+	console.log("LOGIN");
 	if(req.cookies.user != undefined){
 		var userMessage = "You are logged in as: " + req.cookies.user;
 		var logout = "Click here to log out!";
