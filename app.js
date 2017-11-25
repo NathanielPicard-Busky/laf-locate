@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 var Location = mongoose.model('Location');
 var Review = mongoose.model('Review');
-var logout = require('express-passport-logout');
+
 
 app.set('view engine', 'hbs');
 app.set('port', (process.env.PORT || 5000));
@@ -135,15 +135,15 @@ app.get('/about', function(req, res){
 });
 
 
-/*app.get('/logout', function(req, res){
+app.get('/logout', function(req, res){
 	console.log("LOGOUT");
-	req.session.destroy(function (err) {
-		res.clearCookie('connect.sid');
+	req.store.clear(function (err) {
+		//res.clearCookie('connect.sid');
     	res.redirect('/'); //Inside a callback… bulletproof!
   	});
 
-});*/
-app.get('/logout', logout());
+});
+
 
 app.get('/login', function(req, res) {
 
