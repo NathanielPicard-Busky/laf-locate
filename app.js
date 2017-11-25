@@ -15,6 +15,7 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 var Location = mongoose.model('Location');
 var Review = mongoose.model('Review');
+var logout = require('express-passport-logout');
 
 app.set('view engine', 'hbs');
 app.set('port', (process.env.PORT || 5000));
